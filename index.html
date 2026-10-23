@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+  <meta name="color-scheme" content="light">
+  <title>Ameresin · Private review</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="brandbar"><a class="wordmark" href="#">AMERESIN<span class="brand-dot"></span></a><span class="privacy-label"><span class="tiny-lock" aria-hidden="true">▣</span> PRIVATE REVIEW</span></header>
+  <main id="lock-view" class="lock-layout">
+    <section class="lock-story" aria-labelledby="lock-title">
+      <p class="eyebrow">A private look, made for you.</p>
+      <h1 id="lock-title">Mỗi bức ảnh.<br>Một câu chuyện.</h1>
+      <p class="lock-description">Bảng tổng hợp ảnh gốc và các phương án đã tạo. Nội dung được mã hóa trước khi đưa lên web.</p>
+      <div class="security-note"><span aria-hidden="true">↳</span><p>Ảnh chỉ được giải mã trong trình duyệt của a.<br>Không lưu mật khẩu trên thiết bị.</p></div>
+    </section>
+    <section class="unlock-card" aria-labelledby="unlock-heading">
+      <p class="eyebrow">Protected access</p>
+      <h2 id="unlock-heading">Mở bản xem riêng</h2>
+      <p>Nhập mật khẩu được gửi cùng đường dẫn trong Telegram.</p>
+      <form id="unlock-form" novalidate>
+        <label for="password">Mật khẩu báo cáo</label>
+        <div class="password-wrap"><input id="password" name="password" type="password" autocomplete="current-password" spellcheck="false" autocapitalize="none" required aria-describedby="unlock-status"><button id="toggle-password" class="show-password" type="button" aria-label="Hiện mật khẩu" aria-pressed="false">Hiện</button></div>
+        <button id="unlock-button" class="button primary unlock-button" type="submit"><span>Mở báo cáo</span><span aria-hidden="true">↗</span></button>
+        <p id="unlock-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="card-foot"><span class="green-dot"></span> AES-256-GCM · Không có ảnh công khai</div>
+      <noscript>Bản xem này cần JavaScript để giải mã ảnh trên thiết bị.</noscript>
+    </section>
+    <footer class="lock-footer">Studio notes, kept between us.</footer>
+  </main>
+  <main id="report-view" hidden tabindex="-1"></main>
+  <dialog id="image-dialog" aria-labelledby="image-label">
+    <div class="lightbox-head"><div><p class="eyebrow">Image review</p><h2 id="image-label"></h2></div><button id="close-dialog" class="icon-button" aria-label="Đóng ảnh">×</button></div>
+    <div class="lightbox-image-wrap"><img id="large-image" alt=""></div>
+    <div class="lightbox-foot"><button id="previous-image" class="button secondary" aria-label="Ảnh trước">← Trước</button><span id="image-position"></span><a id="download-image" class="button secondary" download>Tải ảnh ↓</a><button id="next-image" class="button secondary" aria-label="Ảnh tiếp theo">Tiếp →</button></div>
+  </dialog>
+</body>
+</html>
